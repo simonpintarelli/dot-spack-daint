@@ -4,7 +4,7 @@ packages:
     all:
         # default compilers defined by the system
         # these reflect the current installed PE
-        compiler: [gcc@8.3.0, cce@9.0.2, intel/19.0.1.144, pgi/19.7.0]
+        compiler: [gcc@9.3.0, gcc@8.3.0, cce@10.0.2, intel/19.1.1.217, pgi/20.1.1]
         providers:
             mpi: [mpich]
             mkl: [intel-mkl]
@@ -33,22 +33,21 @@ packages:
     cray-libsci:
         buildable: false
         modules:
-            cray-libsci@19.06.1%gcc:   cray-libsci/19.06.1
-            cray-libsci@19.06.1%intel: cray-libsci/19.06.1
-            cray-libsci@19.06.1%cce:   cray-libsci/19.06.1
-            cray-libsci@19.06.1%pgi:   cray-libsci/19.06.1
+            cray-libsci@20.06.1%gcc:   cray-libsci/20.06.1
+            cray-libsci@20.06.1%intel: cray-libsci/20.06.1
+            cray-libsci@20.06.1%cce:   cray-libsci/20.06.1
+            cray-libsci@20.06.1%pgi:   cray-libsci/20.06.1
     cray-libsci_acc:
         buildable: false
         modules:
-            cray-libsci_acc@19.10.1%gcc:   cray-libsci_acc/19.10.1
-            cray-libsci_acc@19.10.1%intel: cray-libsci_acc/19.10.1
-            cray-libsci_acc@19.10.1%cce:   cray-libsci_acc/19.10.1
-            cray-libsci_acc@19.10.1%pgi:   cray-libsci_acc/19.10.1
+            cray-libsci_acc@20.06.1%gcc:   cray-libsci_acc/20.06.1
+            cray-libsci_acc@20.06.1%intel: cray-libsci_acc/20.06.1
+            cray-libsci_acc@20.06.1%cce:   cray-libsci_acc/20.06.1
+            cray-libsci_acc@20.06.1%pgi:   cray-libsci_acc/20.06.1
     cuda:
         modules:
-          cuda@10.0: cudatoolkit/10.0.130_3.22-7.0.1.0_5.2__gdfb4ce5
-          cuda@10.1: cudatoolkit/10.1.105_3.27-7.0.1.1_4.1__ga311ce7
-        version: ['10.1']
+          cuda@10.2: cudatoolkit/10.2.89_3.28-7.0.2.1_2.17__g52c0314
+        version: ['10.2']
     curl:
         paths:
              curl@7.60.0: /usr
@@ -61,10 +60,10 @@ packages:
     fftw:
         buildable: false
         modules:
-            fftw@3.3.8.3%gcc+openmp:   cray-fftw/3.3.8.3
-            fftw@3.3.8.3%intel+openmp: cray-fftw/3.3.8.3
-            fftw@3.3.8.3%cce+openmp:   cray-fftw/3.3.8.3
-            fftw@3.3.8.3%pgi+openmp:   cray-fftw/3.3.8.3
+            fftw@3.3.8.7%gcc+openmp:   cray-fftw/3.3.8.7
+            fftw@3.3.8.7%intel+openmp: cray-fftw/3.3.8.7
+            fftw@3.3.8.7%cce+openmp:   cray-fftw/3.3.8.7
+            fftw@3.3.8.7%pgi+openmp:   cray-fftw/3.3.8.7
     gawk:
         paths:
              gawk@4.2.1: /usr
@@ -76,22 +75,22 @@ packages:
     hdf5:
         buildable: false
         modules:
-            hdf5@1.10.5.1%intel~mpi+hl: cray-hdf5/1.10.5.1
-            hdf5@1.10.5.1%gcc~mpi+hl:   cray-hdf5/1.10.5.1
-            hdf5@1.10.5.1%cce~mpi+hl:   cray-hdf5/1.10.5.1
-            hdf5@1.10.5.1%pgi~mpi+hl:   cray-hdf5/1.10.5.1
-            hdf5@1.10.5.1%intel+mpi+hl: cray-hdf5-parallel/1.10.5.1
-            hdf5@1.10.5.1%gcc+mpi+hl:   cray-hdf5-parallel/1.10.5.1
-            hdf5@1.10.5.1%cce+mpi+hl:   cray-hdf5-parallel/1.10.5.1
-            hdf5@1.10.5.1%pgi+mpi+hl:   cray-hdf5-parallel/1.10.5.1
-            hdf5@1.10.5.1%intel~mpi+hl+fortran: cray-hdf5/1.10.5.1
-            hdf5@1.10.5.1%gcc~mpi+hl+fortran:   cray-hdf5/1.10.5.1
-            hdf5@1.10.5.1%cce~mpi+hl+fortran:   cray-hdf5/1.10.5.1
-            hdf5@1.10.5.1%pgi~mpi+hl+fortran:   cray-hdf5/1.10.5.1
-            hdf5@1.10.5.1%intel+mpi+hl+fortran: cray-hdf5-parallel/1.10.5.1
-            hdf5@1.10.5.1%gcc+mpi+hl+fortran:   cray-hdf5-parallel/1.10.5.1
-            hdf5@1.10.5.1%cce+mpi+hl+fortran:   cray-hdf5-parallel/1.10.5.1
-            hdf5@1.10.5.1%pgi+mpi+hl+fortran:   cray-hdf5-parallel/1.10.5.1
+            hdf5@1.12.0.0%intel~mpi+hl: cray-hdf5/1.12.0.0
+            hdf5@1.12.0.0%gcc~mpi+hl:   cray-hdf5/1.12.0.0
+            hdf5@1.12.0.0%cce~mpi+hl:   cray-hdf5/1.12.0.0
+            hdf5@1.12.0.0%pgi~mpi+hl:   cray-hdf5/1.12.0.0
+            hdf5@1.12.0.0%intel+mpi+hl: cray-hdf5-parallel/1.12.0.0
+            hdf5@1.12.0.0%gcc+mpi+hl:   cray-hdf5-parallel/1.12.0.0
+            hdf5@1.12.0.0%cce+mpi+hl:   cray-hdf5-parallel/1.12.0.0
+            hdf5@1.12.0.0%pgi+mpi+hl:   cray-hdf5-parallel/1.12.0.0
+            hdf5@1.12.0.0%intel~mpi+hl+fortran: cray-hdf5/1.12.0.0
+            hdf5@1.12.0.0%gcc~mpi+hl+fortran:   cray-hdf5/1.12.0.0
+            hdf5@1.12.0.0%cce~mpi+hl+fortran:   cray-hdf5/1.12.0.0
+            hdf5@1.12.0.0%pgi~mpi+hl+fortran:   cray-hdf5/1.12.0.0
+            hdf5@1.12.0.0%intel+mpi+hl+fortran: cray-hdf5-parallel/1.12.0.0
+            hdf5@1.12.0.0%gcc+mpi+hl+fortran:   cray-hdf5-parallel/1.12.0.0
+            hdf5@1.12.0.0%cce+mpi+hl+fortran:   cray-hdf5-parallel/1.12.0.0
+            hdf5@1.12.0.0%pgi+mpi+hl+fortran:   cray-hdf5-parallel/1.12.0.0
     hwloc:
         variants: +cuda
     intel-mkl:
@@ -118,10 +117,10 @@ packages:
     mpich:
         buildable: false
         modules:
-            mpich@3.2%gcc:   cray-mpich/7.7.10
-            mpich@3.2%intel: cray-mpich/7.7.10
-            mpich@3.2%cce:   cray-mpich/7.7.10
-            mpich@3.2%pgi:   cray-mpich/7.7.10
+            mpich@3.2%gcc:   cray-mpich/7.7.15
+            mpich@3.2%intel: cray-mpich/7.7.15
+            mpich@3.2%cce:   cray-mpich/7.7.15
+            mpich@3.2%pgi:   cray-mpich/7.7.15
     netcdf:
         buildable: false
         modules:
@@ -202,4 +201,3 @@ packages:
     zlib:
         paths:
              zlib@1.2.11: /usr
-
